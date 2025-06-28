@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="main.css">
 
     </head> 
-    <body class="mx-auto h-screen bg-bgColor px-4 font-mono text-sm font-normal text-textColor antialiased sm:px-8"> <!-- <Header /> --> 
+    <body class="mx-auto h-screen bg-bgColor px-4 font-mono text-sm font-normal text-textColor antialiased sm:px-8" x-data="{'showModal': false }" @keydown.escape="showModal = false" x-cloak :class="{ 'scroll_lock': showModal}"></body>> <!-- <Header /> --> 
         <div class="lg:max-h-screen"> 
             <main id="main" class="flex-grow">  
                 <div class="hero relative z-10"> 
@@ -39,7 +39,7 @@
                                     <div> 
                                         <a href="/" class="block text-4xl font-bold tracking-tight lg:text-5xl"><h1>&nbsp;</h1> </a> 
                                         <h2 class="mt-2 text-sm text-neutral-400 lg:text-lg">A Legion Revelation</h2> 
-                                        <a data-cursor href="" class="umami--click--email-button hover:border-opacity-0 border-opacity-50 group mt-4 inline-flex items-center gap-x-2 rounded-md border border-neutral-700 bg-neutral-400/10 p-2 px-3 py-2.5 text-sm font-semibold text-white shadow transition-all"> <span>Follow the journey 👊</span> <span class="h-2 w-2 animate-pulse rounded-full bg-accent duration-1000"></span> </a> 
+                                        <a @click="showModal = true" data-cursor class="umami--click--email-button hover:border-opacity-0 border-opacity-50 group mt-4 inline-flex items-center gap-x-2 rounded-md border border-neutral-700 bg-neutral-400/10 p-2 px-3 py-2.5 text-sm font-semibold text-white shadow transition-all"> <span>Follow the journey 👊</span> <span class="h-2 w-2 animate-pulse rounded-full bg-accent duration-1000"></span> </a> 
                                     </div> 
                                 </div> 
                                 <ul class="mt-8 flex items-center justify-center lg:justify-normal gap-x-5" aria-label="Social media"> 
@@ -52,4 +52,43 @@
         <li>
             <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 hover:backdrop-blur-sm duration-500"> <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div> <div class="z-10 sm:col-span-6"> <h3 class="font-medium leading-snug text-neutral-200"> <div> <a class="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-neutral-300 focus-visible:text-neutral-300 group/link text-base" href="" target="_blank" rel="noreferrer" aria-label="Senior Revelation 9"> <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span> <div class="flex gap-x-2 items-center"> <img class="w-8 h-8 rounded" src="img/right-arrow.png" alt="Ride"> <span>2025  · <span class="inline-block">April<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg> </span> </span> </div> </a> </div> </h3><ul class="mt-2 flex flex-wrap" aria-label="Data"> <li class="mr-1.5 mt-2"> <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300">Distance: 777.0 km</div> </li><li class="mr-1.5 mt-2"> <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300">Time: 26h 32m</div> </li><li class="mr-1.5 mt-2"> <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300">Elevation: 7,390 m</div> </li></ul> </div> </div> </li>
         </ol> 
-     </div> </section> </main> </div> </div> </div>  </main> </div> </body></html>
+     </div> </section> </main> </div> </div> </div>  
+    <div class="relative z-100 mb-8" aria-labelledby="modal-title" role="dialog" aria-modal="true" style="z-index:4000000;">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" @click="showModal = false"
+        x-show="showModal"></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto" x-show="showModal" @click.away="showModal = false"
+        x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <div
+            class="grid grid-cols-1 md:grid-cols-1 gap-10 md:gap-x-8 items-start md:w-full md:max-w-screen-s md:px-20">
+            <div
+            class="w-full relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-10 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md md:max-w-full sm:p-6">
+            <div class="w-full max-w-full">
+                <img class="mx-auto rounded shadow-lg"
+                    src="files/topcontact2.jpg" alt="modal_banner" />
+            </div>
+            <div class="absolute top-0 right-0 pt-4 pr-4 md:block">
+                <button type="button" @click="showModal = false"
+                class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                <span class="sr-only">Close</span>
+                            <!-- Heroicon name: outline/x-mark -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="space-y-5">
+                        <div class="grid grid-cols-1 gap-y-5 schedule_contact">
+                          <p class="block font-medium text-normal text-gray-700"><br />Aveți o întrebare sau un feedback pentru noi? Completați formularul de mai jos și vă vom contacta în cel mai scurt timp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main> </div> </body></html>
