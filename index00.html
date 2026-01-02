@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Rev 9 | Revelation 9</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link href="https://rev-9.github.io" rel="canonical">
+    
+    <meta content="Rev 9 | Revelation 9" name="title">
+    <meta content="Senior Revelation 9 & competitive cyclist" name="description">
+    <meta content="Rev 9" name="author">
+    <meta content="Rev 9 | Revelation 9" property="og:title">
+    <meta content="Senior Revelation 9 & competitive cyclist" property="og:description">
+    <meta content="https://rev-9.github.io" property="og:url">
+    <meta content="Rev 9 | Revelation 9" property="og:site_name">
+    <meta content="summary_large_image" property="twitter:card">
+    
+    <link rel="stylesheet" href="main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        [x-cloak] { display: none !important; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="mx-auto bg-black font-mono text-sm font-normal text-slate-300 antialiased" 
+      x-data="{ showModal: false }" 
+      :class="{ 'overflow-hidden': showModal }">
+
+    <div class="lg:max-h-screen">
+        <main id="main" class="flex-grow">
+            <div class="hero relative z-10">
+                <div class="mx-auto max-w-screen-2xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+                    <div class="lg:flex lg:justify-between lg:gap-4">
+                        
+                        <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+                            <div class="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-start lg:text-left">
+                                <div class="relative inline-block group">
+                                    <div class="absolute -inset-1 bg-red-600 rounded-full blur-md opacity-40 animate-pulse group-hover:opacity-100 transition duration-500"></div>
+                                    <img src="img/logo.png" alt="Rev-9" class="relative aspect-square border-red-600 w-32 rounded-full border-2 object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div>
+                                    <a href="/" class="block text-4xl font-bold tracking-tight lg:text-5xl text-white">Rev 9</a>
+                                    <h2 class="mt-2 text-sm text-neutral-400 lg:text-lg uppercase tracking-widest">A Legion Revelation</h2>
+                                    
+                                    <div class="relative inline-flex mt-6 group">
+                                        <div class="absolute -inset-0.5 bg-red-600 rounded-md blur opacity-30 animate-pulse group-hover:opacity-100 transition duration-500"></div>
+                                        <button @click="showModal = true" class="relative flex items-center gap-x-2 rounded-md border border-red-900/50 bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white shadow-xl transition-all hover:bg-red-950/30">
+                                            <span>Follow the journey 👊</span>
+                                            <span class="h-2 w-2 animate-pulse rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="mt-8 flex items-center justify-center lg:justify-normal gap-x-5" aria-label="Social media">
+                                <li class="p-2 rounded hover:bg-red-600/10 transition-colors">
+                                    <a href="https://www.strava.com/athletes/158114523" target="_blank" class="text-slate-400 hover:text-white">
+                                        <span class="sr-only">Strava</span>
+                                        <svg viewBox="2 2 12 12" height="24" width="24" fill="currentColor"><path d="M6.9 8.8l2.5 4.5 2.4-4.5h-1.5l-.9 1.7-1-1.7z" opacity=".6"></path><path d="M7.2 2.5l3.1 6.3H4zm0 3.8l1.2 2.5H5.9z"></path></svg>
+                                    </a>
+                                </li>
+                                <li class="p-2 rounded hover:bg-red-600/10 transition-colors">
+                                    <a href="https://www.instagram.com/r3vnin3/" target="_blank" class="text-slate-400 hover:text-white">
+                                        <span class="sr-only">Instagram</span>
+                                        <svg viewBox="0 0 960 960" height="24" width="24" fill="currentColor"><path d="M495.188 393.309C393.515 388.116 362.155 555.606 473.715 560.101C578.584 557.604 594.664 423.172 495.188 393.309ZM473.915 354.857C649.495 342.972 638.709 602.448 473.116 600.65C316.212 595.856 330.894 368.84 473.915 354.857Z"/></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </header>
+
+                        <main id="content" class="pt-12 lg:w-1/2 lg:pt-24">
+                            <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
+                                <div class="space-y-6 text-slate-400 leading-relaxed">
+                                    <p>Fueled by passion, powered by two wheels — I enjoy every ride. Sunsets over segments, climbs over crowds, and every kilometer stokes the fire.</p>
+                                    <p class="text-white font-bold italic">Cycling isn’t just a sport, it’s my freedom, my fuel and my joy.</p>
+                                    <p>I'd love to share the roads with friends - same hills, same wind, same forests, same joy shared. Riding with friends brings a special kind of joy and the bond built over winding roads and long climbs.</p>
+                                    <p>But cycling friends are rare, hard to find and harder to sync with. And so, more often than not, I mostly ride alone.</p>
+                                    <p>In those solo rides, there’s a different kind of beauty. The steady rhythm of my breath, the sound of the tires and the clarity that comes with being alone in motion.</p>
+                                    <p class="border-l-2 border-red-600 pl-4 italic">I ride on and stay low. Wheels turn, but I stay beneath the noise.</p>
+                                </div>
+                            </section>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div x-show="showModal" 
+         class="fixed inset-0 z-50 flex items-center justify-center p-4" 
+         x-transition.opacity x-cloak>
+        
+        <div class="absolute inset-0 backdrop-blur-md bg-black/80" @click="showModal = false"></div>
+        
+        <div class="relative w-full max-w-5xl">
+            <div class="absolute -inset-1 bg-red-600 rounded-2xl blur-xl opacity-20 animate-pulse"></div>
+            
+            <div class="relative z-10 bg-slate-900 rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row h-auto md:h-[600px] border border-red-600/30">
+                
+                <div class="md:w-1/3 h-48 md:h-auto border-r border-slate-800">
+                    <img src="img/bg01.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+
+                <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="flex flex-col sm:flex-row items-start gap-8">
+                            <div class="group relative flex-shrink-0 w-48">
+                                <div class="absolute -inset-2 bg-red-600 rounded-lg blur-lg opacity-30 animate-pulse group-hover:opacity-100 transition duration-700"></div>
+                                <img src="img/strava2025.png" alt="Stats" class="relative w-full aspect-[0.5625] object-cover rounded-xl border border-red-500/40">
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="mb-4">
+                                    <h2 class="text-xl font-black text-white uppercase italic animate-fade-in-up" style="animation-delay: 100ms;">
+                                        2025: <span class="text-red-600 text-lg">in cycling</span>
+                                    </h2>
+                                    <p class="text-[9px] text-slate-500 uppercase tracking-[0.3em] font-bold mt-1">Performance Review</p>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed animate-fade-in-up" style="animation-delay: 200ms;">
+                                    This year wasn't just about the <span class="text-white">kilometers</span>, it was about quality rides and the moments that defined them.
+                                </p>
+
+                                <div class="mt-4 bg-slate-800/40 p-4 rounded-lg border-l-2 border-red-600 animate-fade-in-up" style="animation-delay: 300ms;">
+                                    <h3 class="text-[10px] font-bold text-red-500 uppercase tracking-wider mb-2">Awesome Moments</h3>
+                                    <ul class="text-[12px] text-slate-400 space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <span class="h-1.5 w-1.5 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span>
+                                            <span><strong class="text-white">Ziridava Race:</strong> Pure flow state.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="h-1.5 w-1.5 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span>
+                                            <span><strong class="text-white">Max Ausnit:</strong> Finding the rhythm.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="h-1.5 w-1.5 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span>
+                                            <span><strong class="text-white">Transfagarasan:</strong> Every pedal stroke.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-800/60 animate-fade-in-up" style="animation-delay: 400ms;">
+                            <h3 class="text-[10px] font-bold text-red-500 uppercase tracking-wider mb-1">New Hope for 2026</h3>
+                            <p class="text-[12px] text-slate-400 italic">The ride doesn't end — it just gets better. New roads are calling.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-8 animate-fade-in-up" style="animation-delay: 500ms;">
+                        <a href="https://www.strava.com/athletes/158114523" target="_blank" 
+                           class="flex-grow bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-md transition-all text-xs text-center uppercase tracking-widest shadow-lg shadow-red-900/40">
+                            Sync on Strava
+                        </a>
+                        <button @click="showModal = false" 
+                                class="px-8 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-500 hover:text-white py-3 rounded-md transition text-[10px] uppercase tracking-widest font-bold">
+                            Dismiss
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
