@@ -23,6 +23,14 @@
   </head> 
 
   <body class="mx-auto bg-bgColor px-4 font-mono text-sm font-normal text-textColor antialiased sm:px-8" x-data="{ showModal: false }" :class="{ 'overflow-hidden': showModal }">  
+    <div id="langSwitcher" class="fixed top-4 right-8 z-50">
+      <button id="langBtn" class="w-10 h-10 rounded-full overflow-hidden border-4 border-red-600 hover:scale-110 transition">
+        <img id="langFlag" src="img/uk.svg" class="w-full h-full object-cover" alt="Switch Language">
+      </button>
+    </div>
+
+
+
     <div class="lg:max-h-screen"> 
       <main id="main" class="flex-grow">  
         <div class="hero relative z-10"> 
@@ -36,10 +44,12 @@
                     </div> 
                     <div> 
                       <a href="/" class="block text-4xl font-bold tracking-tight lg:text-5xl"><h1>&nbsp;</h1> </a> 
-                      <h2 class="mt-2 text-sm text-neutral-400 lg:text-lg">A Legion Revelation</h2> 
+                      <h2 data-ro="Revelația Legiunii"
+  data-en="A Legion Revelation" class="mt-2 text-sm text-neutral-400 lg:text-lg"></h2> 
                       <div class="relative inline-flex mt-4 group">
                         <div class="absolute -inset-0.5 bg-red-600 rounded-md blur opacity-30 animate-pulse group-hover:opacity-100 transition duration-500"></div>
-                        <a @click="showModal = true" data-cursor class="umami--click--email-button relative flex items-center gap-x-2 rounded-md border border-red-900/50 bg-neutral-900 px-3 py-2.5 text-sm font-semibold text-white shadow-xl transition-all hover:bg-red-950/30 cursor-pointer"><span>Follow the journey 👊</span><span class="h-2 w-2 animate-pulse rounded-full bg-red-500 duration-1000 shadow-[0_0_8px_rgba(239,68,68,0.8)]"></span>
+                        <a @click="showModal = true" data-cursor class="umami--click--email-button relative flex items-center gap-x-2 rounded-md border border-red-900/50 bg-neutral-900 px-3 py-2.5 text-sm font-semibold text-white shadow-xl transition-all hover:bg-red-950/30 cursor-pointer"><span  data-ro="Continuă aventura 👊"
+  data-en="Follow the journey 👊"></span><span class="h-2 w-2 animate-pulse rounded-full bg-red-500 duration-1000 shadow-[0_0_8px_rgba(239,68,68,0.8)]"></span>
                         </a>
                       </div> 
                     </div> 
@@ -55,23 +65,22 @@
     <main id="content" class="pt-12 lg:w-1/2 lg:pt-24">
       <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me">
         <div class="sticky top-0 z-20 mb-4 w-full px-6 py-3 backdrop-blur-lg md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-          <h2 class="tracking-widest text-sm font-bold uppercase text-red-500">About</h2>
+          <h2  data-ro="Despre" data-en="About" class="tracking-widest text-sm font-bold uppercase text-red-500"></h2>
         </div>
 
         <div class="relative">
           <div class="bg-neutral-900/40 border border-red-600 rounded-2xl p-6 md:p-8 backdrop-blur-sm shadow-[0_0_15px_rgba(220,38,38,0.1)]">
             <div class="space-y-6 text-slate-300 leading-relaxed text-xs sm:text-sm">             
-              <p>Fueled by passion, powered by two wheels — I enjoy every ride. Sunsets over segments, climbs over crowds, and every kilometer stokes the fire.</p>
-              <p class="text-white italic border-l-2 border-red-600 pl-4">Cycling isn’t just a sport, it’s my freedom, my fuel and my joy.</p>
-              <p>I'd love to share the roads with friends - same hills, same wind, same forests, same joy shared. Riding with friends brings a special kind of joy and the bond built over winding roads and long climbs. But cycling friends are rare, hard to find and harder to sync with.</p>
-              <p>And so, more often than not, I mostly ride alone. In those solo rides, there’s a different kind of beauty. The steady rhythm of my breath, the warmth of a sunrise, the sound of the tires and the clarity that comes with being alone in motion.</p>
+              <p data-ro="Împins de pasiunea alimentată de două roți — mă bucur de fiecare tură. Apusuri de soare peste segmentele Strava, urcări peste mulțimi, iar fiecare kilometru aprinde focul."
+                  data-en="Fueled by passion, powered by two wheels — I enjoy every ride. Sunsets over segments, climbs over crowds, and every kilometer stokes the fire."></p>
+              <p class="text-white italic border-l-2 border-red-600 pl-4"  data-ro="Ciclismul nu este doar un sport, este libertatea, combustibilul şi bucuria mea."  data-en="Cycling isn’t just a sport, it’s my freedom, my fuel and my joy."></p>
+              <p data-ro="Îmi place să împart drumurile cu prietenii mei de ciclism — aceleași dealuri, același vânt, aceleași păduri, aceeași bucurie împărtășită între noi. Dar prietenii cicliști sunt rari, greu de găsit și cu care ma sincronizez mult mai greu."  data-en="I like to share the roads with my cycling friends - same hills, same wind, same forests, same joy shared. But cycling friends are rare, hard to find and harder to sync with."></p>
+              <p data-ro="Așa că, de cele mai multe ori, pedalez singur. În turele solo există un altfel de frumusețe. Ritmul respirației, căldura unui răsărit de soare, sunetul anvelopelor și limpezimea care vine din mișcare."  data-en="And so, more often than not, I mostly ride alone. In those solo rides, there’s a different kind of beauty. The steady rhythm of my breath, the warmth of a sunrise, the sound of the tires and the clarity that comes with being alone in motion."></p>
               <div class="space-y-1">
-                  <p class="text-white font-black tracking-tighter italic">I ride on and stay low. Wheels turn, but I stay beneath the noise.</p>
+                <p class="text-white font-black tracking-tighter italic"  data-ro="Continui să pedalez și să rămân anonim. Roțile se învârt, dar eu rămân sub agitaţia cotidiană." data-en="I ride on and stay low. Wheels turn, but I stay beneath the noise."></p>
               </div>
-              <p>Not for clout, not for show — but for peace, good vibes, just me, the wind, the road and the freedom of two wheels.</p>
-              <p class="pt-4 text-[10px] uppercase tracking-[0.3em] font-black text-slate-500">
-                  Follow the journey <span class="text-red-600">for more details</span>
-              </p>
+                  <p data-ro="Nu pentru faimă, nu pentru spectacol — ci pentru liniște, vibrații bune, doar eu, vântul, drumul și libertatea pe două roți." data-en="Not for clout, not for show — but for peace, good vibes, just me, the wind, the road and the freedom of two wheels."></p>
+              <p class="pt-4 text-[10px] uppercase tracking-[0.3em] font-black text-slate-500" data-ro="Urmărește călătoria pentru mai multe detalii" data-en="Follow the journey for more details"></p>
 
             </div>
           </div>
@@ -79,7 +88,7 @@
       </section>
       <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Rides of the year">
         <div class="sticky top-0 z-20 mb-4 w-full px-6 py-3 backdrop-blur-lg md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-          <h2 class="tracking-widest text-sm font-bold uppercase text-red-500">My rides of the year</h2>
+          <h2 data-ro="Turele din anul curent" data-en="My rides of the year" class="tracking-widest text-sm font-bold uppercase text-red-500"></h2>
         </div>
         <div>
           <ol class="group/list space-y-12">
@@ -87,7 +96,7 @@
               <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 hover:backdrop-blur-sm duration-500">
                 <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                 <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-neutral-500 sm:col-span-2" aria-label="December 2023 — present">
-                  <span>2026 - January</span>
+                  <span data-ro="2026 - Ianuarie" data-en="2026 - January"></span>
                 </header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-neutral-200">
@@ -95,20 +104,22 @@
                       <a class="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-neutral-300 focus-visible:text-neutral-300 group/link text-base" href="" target="_blank" rel="noreferrer" aria-label="Engineer">
                         <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                         <div class="flex gap-x-2 items-center"> <img class="w-8 h-8 rounded bg-neutral-400/10 " src="img/right-arrow.png" alt="TreasurUp logo">
-                          <span>18 rides indoor and outdoors</span></span>
+                          <span data-ro="18 ture indoor și outdoor" data-en="18 rides indoor and outdoors"></span></span>
                         </div>
                       </a>
                     </div>
                   </h3>
                   <ul class="mt-2 flex flex-wrap" aria-label="Data">
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Distance: 1026.8 km </div>
+                      <div data-ro="Distanță: 1026.8 km"
+  data-en="Distance: 1026.8 km" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Time: 29h 32min </div>
+                      <div data-ro="Timp: 29h 32min" data-en="Time: 29h 32min" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Elevation: 4,919 m </div>
+                      <div data-ro="Altitudine: 4,919 m"
+  data-en="Elevation: 4,919 m" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                   </ul>
                 </div>
@@ -118,7 +129,7 @@
               <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 hover:backdrop-blur-sm duration-500">
                 <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                 <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-neutral-500 sm:col-span-2" aria-label="February">
-                  <span>2026 - February</span>
+                  <span data-ro="2026 - Februarie" data-en="2026 - February"></span>
                 </header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-neutral-200">
@@ -126,20 +137,22 @@
                       <a class="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-neutral-300 focus-visible:text-neutral-300 group/link text-base" href="" target="_blank" rel="noreferrer" aria-label="Engineer">
                         <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                         <div class="flex gap-x-2 items-center"> <img class="w-8 h-8 rounded bg-neutral-400/10 " src="img/right-arrow.png" alt="TreasurUp logo">
-                          <span>13 rides indoor and outdoors</span></span>
+                          <span data-ro="13 ture indoor și outdoor" data-en="13 rides indoor and outdoors"></span></span>
                         </div>
                       </a>
                     </div>
                   </h3>
                   <ul class="mt-2 flex flex-wrap" aria-label="Data">
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Distance: 765.6 km </div>
+                      <div data-ro="Distanță: 765.6 km"
+  data-en="Distance: 765.6 km" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Time: 22h 53min </div>
+                      <div  data-ro="Timp: 22h 53min" data-en="Time: 22h 53min" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Elevation: 4,549 m </div>
+                      <div  data-ro="Altitudine: 4,549 m"
+  data-en="Elevation: 4,549 m" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                   </ul>
                 </div>
@@ -149,7 +162,7 @@
               <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 hover:backdrop-blur-sm duration-500">
                 <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                 <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-neutral-500 sm:col-span-2" aria-label="March">
-                  <span>2026 - March</span>
+                  <span data-ro="2026 - Martie" data-en="2026 - March"></span>
                 </header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-neutral-200">
@@ -157,20 +170,22 @@
                       <a class="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-neutral-300 focus-visible:text-neutral-300 group/link text-base" href="" target="_blank" rel="noreferrer" aria-label="Engineer">
                         <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                         <div class="flex gap-x-2 items-center"> <img class="w-8 h-8 rounded bg-neutral-400/10 " src="img/right-arrow.png" alt="TreasurUp logo">
-                          <span>17 rides indoor and outdoors</span></span>
+                          <span data-ro="17 ture indoor și outdoor" data-en="17 rides indoor and outdoors"></span></span>
                         </div>
                       </a>
                     </div>
                   </h3>
                   <ul class="mt-2 flex flex-wrap" aria-label="Data">
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Distance: 980.3 km </div>
+                      <div data-ro="Distanță: 980.3 km"
+  data-en="Distance: 980.3 km" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Time: 29h 19min </div>
+                      <div data-ro="Timp: 29h 19min" data-en="Time: 29h 19min" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Elevation: 4,221 m </div>
+                      <div data-ro="Altitudine: 4,221 m"
+  data-en="Elevation: 4,221 m" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                   </ul>
                 </div>
@@ -180,7 +195,7 @@
               <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 hover:backdrop-blur-sm duration-500">
                 <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                 <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-neutral-500 sm:col-span-2" aria-label="March">
-                  <span>2026 - April</span>
+                  <span data-ro="2026 - Aprilie" data-en="2026 - April"></span>
                 </header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-neutral-200">
@@ -188,20 +203,22 @@
                       <a class="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-neutral-300 focus-visible:text-neutral-300 group/link text-base" href="" target="_blank" rel="noreferrer" aria-label="Engineer">
                         <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                         <div class="flex gap-x-2 items-center"> <img class="w-8 h-8 rounded bg-neutral-400/10 " src="img/right-arrow.png" alt="TreasurUp logo">
-                          <span>20 outdoors rides</span></span>
+                          <span data-ro="20 ture indoor și outdoor" data-en="20 rides indoor and outdoors"></span></span>
                         </div>
                       </a>
                     </div>
                   </h3>
                   <ul class="mt-2 flex flex-wrap" aria-label="Data">
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blursm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Distance: 1023.7 km</div>
+                      <div data-ro="Distanță: 1023.7 km"
+  data-en="Distance: 1023.7 km" class="flex items-center backdrop-blursm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Time: 34h 33min </div>
+                      <div data-ro="Timp: 34h 33min" data-en="Time: 34h 33min" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                     <li class="mr-1.5 mt-2">
-                      <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"> Elevation: 6,213 m </div>
+                      <div data-ro="Altitudine: 6,213 m"
+  data-en="Elevation: 6,213 m" class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300"></div>
                     </li>
                   </ul>
                 </div>
@@ -213,69 +230,167 @@
 
 <div x-show="showModal" class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4" x-transition.opacity x-cloak>    
     <div class="absolute inset-0 backdrop-blur-md bg-black/80 pointer-events-none"></div>
+
     <div class="relative w-full max-w-5xl max-h-[96vh] flex flex-col" @click.stop>        
         <div class="relative z-10 bg-slate-900 rounded-2xl shadow-2xl flex flex-col md:flex-row border border-red-600/30 overflow-hidden">            
+
             <div class="hidden md:flex w-full md:w-1/3 bg-black border-b md:border-b-0 md:border-r border-slate-800 items-center justify-center shrink-0 overflow-hidden">
                 <img src="img/bg01.png" class="w-full h-auto max-h-[20vh] md:max-h-full md:h-full object-contain md:object-cover">
             </div>
+
             <div class="w-full md:w-2/3 flex flex-col overflow-y-auto custom-scrollbar">                
                 <div class="p-4 sm:p-8"> 
+
                     <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8">                        
                         <div class="group relative shrink-0 w-28 sm:w-40 md:w-48">
                             <div class="absolute -inset-2 bg-red-600 rounded-lg blur-lg opacity-20 animate-pulse"></div>
                             <img src="img/strava2025.png" alt="Stats" class="relative w-full aspect-[0.5625] object-cover rounded-xl border border-red-500/40">
                         </div>
+
                         <div class="flex-1 text-center sm:text-left">
                             <div class="mb-2">
-                                <h2 class="text-lg font-black text-white uppercase italic">
-                                    2025: <span class="text-red-600">in cycling</span>
+
+                                <h2 class="text-lg font-black text-white uppercase italic"
+                                    data-ro="2025: în ciclism"
+                                    data-en="2025: in cycling">
                                 </h2>
-                                <p class="text-[9px] text-slate-500 uppercase tracking-[0.3em] font-bold mt-1">Performance Review</p>
+
+                                <p class="text-[9px] text-slate-500 uppercase tracking-[0.3em] font-bold mt-1"
+                                   data-ro="Analiză de performanță"
+                                   data-en="Performance Review">
+                                </p>
                             </div>                            
-                            <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                                This year wasn't just about the <span class="text-white font-medium">kilometers</span>, it was about quality rides and the moments that defined them. From the solo rides to the adrenaline of races, 2025 was a masterclass in persistence.
+
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4"
+                               data-ro="Anul acesta nu a fost doar despre kilometri, ci despre ture de calitate și momentele care le-au definit. De la turele solo la adrenalina curselor, 2025 a fost o lecție de perseverență."
+                               data-en="This year wasn't just about the kilometers, it was about quality rides and the moments that defined them. From the solo rides to the adrenaline of races, 2025 was a masterclass in persistence.">
                             </p>
+
                             <div class="bg-slate-800/40 p-4 rounded-lg border-l-2 border-red-600 text-left">
-                                <h3 class="text-[10px] font-bold text-red-500 uppercase tracking-wider mb-2">Awesome Moments</h3>
+
+                                <h3 class="text-[10px] font-bold text-red-500 uppercase tracking-wider mb-2"
+                                    data-ro="Momente Unice"
+                                    data-en="Awesome Moments">
+                                </h3>
+
                                 <ul class="text-[11px] text-slate-400 space-y-2">
+
+                                    <li class="flex items-start gap-2">
+                                      <span class="h-1.5 w-1.5 bg-red-600 rounded-full mt-1.5 shrink-0"></span>
+                                      <span>
+                                          <strong class="text-white"
+                                              data-ro="Cursa Ziridava:"
+                                              data-en="The Ziridava race:">
+                                          </strong>
+                                          <span
+                                              data-ro=" Cursă cu un ritm perfect."
+                                              data-en=" Pure flow state.">
+                                          </span>
+                                      </span>
+                                  </li>
+
+
+                                  <li class="flex items-start gap-2">
+                                      <span class="h-1.5 w-1.5 bg-red-600 rounded-full mt-1.5 shrink-0"></span>
+
+                                      <span>
+                                          <strong class="text-white"
+                                              data-ro="Max Ausnit:"
+                                              data-en="Max Ausnit:">
+                                          </strong>
+
+                                          <span
+                                              data-ro=" Găsirea ritmului perfect în ritmul impus."
+                                              data-en=" Finding the perfect rhythm within the pace.">
+                                          </span>
+                                      </span>
+                                  </li>
+
+
                                     <li class="flex items-start gap-2">
                                         <span class="h-1.5 w-1.5 bg-red-600 rounded-full mt-1.5 shrink-0"></span>
-                                        <span><strong class="text-white">The Ziridava race:</strong> Pure flow state.</span>
+
+                                        <span>
+                                            <strong class="text-white"
+                                                data-ro="Provocarea Transfăgărășan:"
+                                                data-en="Transfagarasan challenge:">
+                                            </strong>
+
+                                            <span
+                                                data-ro=" Bucurându-mă de fiecare pedală."
+                                                data-en=" Enjoying every pedal stroke.">
+                                            </span>
+                                        </span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="h-1.5 w-1.5 bg-red-600 rounded-full mt-1.5 shrink-0"></span>
-                                        <span><strong class="text-white">Max Ausnit:</strong> Finding the perfect rhythm within the pace.</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="h-1.5 w-1.5 bg-red-600 rounded-full mt-1.5 shrink-0"></span>
-                                        <span><strong class="text-white">Transfagarasan challenge:</strong> Enjoying every pedal stroke.</span>
-                                    </li>
+
+
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-6 pt-4 border-t border-slate-800/60">
-                        <h3 class="text-[10px] font-bold text-red-500 uppercase tracking-wider mb-1">New Hope for 2026</h3>
-                        <p class="text-[12px] text-slate-400 italic">The ride doesn't end — it just gets better. New roads are calling.</p>
+
+                        <h3 class="text-[10px] font-bold text-red-500 uppercase tracking-wider mb-1"
+                            data-ro="Speranțe noi pentru 2026"
+                            data-en="New Hope for 2026">
+                        </h3>
+
+                        <p class="text-[12px] text-slate-400 italic"
+                           data-ro="Tura nu se termină — doar devine mai bună. Drumuri noi mă așteaptă."
+                           data-en="The ride doesn't end — it just gets better. New roads are calling.">
+                        </p>
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-center gap-3 mt-6 pt-4 border-t border-slate-800">
+
                         <a href="https://www.strava.com/athletes/158114523" target="_blank" 
-                           class="w-full sm:flex-grow bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-md transition-all text-xs text-center uppercase tracking-widest shadow-lg shadow-red-900/40">
-                            Sync on Strava
+                           class="w-full sm:flex-grow bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-md transition-all text-xs text-center uppercase tracking-widest shadow-lg shadow-red-900/40"
+                           data-ro="Sincronizează pe Strava"
+                           data-en="Sync on Strava">
                         </a>
+
                         <button @click="showModal = false" 
-                                class="w-full sm:w-auto px-10 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-500 hover:text-white py-3 rounded-md transition text-[10px] uppercase tracking-widest font-bold">
-                            Dismiss
+                                class="w-full sm:w-auto px-10 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-500 hover:text-white py-3 rounded-md transition text-[10px] uppercase tracking-widest font-bold"
+                                data-ro="Închide"
+                                data-en="Dismiss">
                         </button>
+
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
     </main>
   </div>
+
+<script>
+  function applyLanguage(lang) {
+    document.querySelectorAll("[data-ro]").forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+
+    // schimbăm steagul în funcție de limba curentă
+    const flag = document.getElementById("langFlag");
+    flag.src = lang === "ro" ? "img/uk.svg" : "img/ro.png";
+
+    localStorage.setItem("lang", lang);
+  }
+
+  document.getElementById("langBtn").addEventListener("click", () => {
+    const current = localStorage.getItem("lang") || "ro";
+    const next = current === "ro" ? "en" : "ro";
+    applyLanguage(next);
+  });
+
+  // Limba salvată
+  const saved = localStorage.getItem("lang") || "ro";
+  applyLanguage(saved);
+</script>
+
+
 </body>
 </html>
