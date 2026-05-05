@@ -23,8 +23,8 @@
   </head> 
 
   <body class="mx-auto bg-bgColor px-4 font-mono text-sm font-normal text-textColor antialiased sm:px-8" x-data="{ showModal: false }" :class="{ 'overflow-hidden': showModal }">  
-    <div id="langSwitcher" class="fixed top-4 right-8 z-50">
-      <button id="langBtn" class="w-10 h-10 rounded-full overflow-hidden border-4 border-red-600 hover:scale-110 transition">
+    <div id="langSwitcher" class="fixed top-4 right-8 z-50 animate-pulse">
+      <button id="langBtn" class="w-10 h-10 rounded-full overflow-hidden border-2 border-red-600 hover:scale-110 transition">
         <img id="langFlag" src="img/uk.svg" class="w-full h-full object-cover" alt="Switch Language">
       </button>
     </div>
@@ -71,8 +71,9 @@
         <div class="relative">
           <div class="bg-neutral-900/40 border border-red-600 rounded-2xl p-6 md:p-8 backdrop-blur-sm shadow-[0_0_15px_rgba(220,38,38,0.1)]">
             <div class="space-y-6 text-slate-300 leading-relaxed text-xs sm:text-sm">             
-              <p data-ro="Împins de pasiunea alimentată de două roți — mă bucur de fiecare tură. Apusuri de soare peste segmentele Strava, urcări peste mulțimi, iar fiecare kilometru aprinde focul."
-                  data-en="Fueled by passion, powered by two wheels — I enjoy every ride. Sunsets over segments, climbs over crowds, and every kilometer stokes the fire."></p>
+              <p data-ro="Două roți mă poartă, pasiunea mă împinge, iar drumul îmi dă libertatea pe care nu o găsesc nicăieri altundeva. În ritmul pedalelor găsesc liniște, în urcări găsesc putere, iar fiecare tură devine o mică evadare care mă duce mereu mai departe."
+   data-en="Two wheels carry me, passion drives me, and the road gives me a freedom I find nowhere else. In the rhythm of the pedals I find calm, in the climbs I find strength, and every ride becomes a small escape that takes me further every time.">
+</p>
               <p class="text-white italic border-l-2 border-red-600 pl-4"  data-ro="Ciclismul nu este doar un sport, este libertatea, combustibilul şi bucuria mea."  data-en="Cycling isn’t just a sport, it’s my freedom, my fuel and my joy."></p>
               <p data-ro="Îmi place să împart drumurile cu prietenii mei de ciclism — aceleași dealuri, același vânt, aceleași păduri, aceeași bucurie împărtășită între noi. Dar prietenii cicliști sunt rari, greu de găsit și cu care ma sincronizez mult mai greu."  data-en="I like to share the roads with my cycling friends - same hills, same wind, same forests, same joy shared. But cycling friends are rare, hard to find and harder to sync with."></p>
               <p data-ro="Așa că, de cele mai multe ori, pedalez singur. În turele solo există un altfel de frumusețe. Ritmul respirației, căldura unui răsărit de soare, sunetul anvelopelor și limpezimea care vine din mișcare."  data-en="And so, more often than not, I mostly ride alone. In those solo rides, there’s a different kind of beauty. The steady rhythm of my breath, the warmth of a sunrise, the sound of the tires and the clarity that comes with being alone in motion."></p>
@@ -300,8 +301,8 @@
                                           </strong>
 
                                           <span
-                                              data-ro=" Găsirea ritmului perfect în ritmul impus."
-                                              data-en=" Finding the perfect rhythm within the pace.">
+                                              data-ro="Atingerea ritmului perfect când cursa devine activă."
+                                              data-en="Hitting that perfect rhythm when the race comes alive.">
                                           </span>
                                       </span>
                                   </li>
@@ -312,7 +313,7 @@
 
                                         <span>
                                             <strong class="text-white"
-                                                data-ro="Provocarea Transfăgărășan:"
+                                                data-ro="Transfagarasan challenge:"
                                                 data-en="Transfagarasan challenge:">
                                             </strong>
 
@@ -337,8 +338,12 @@
                         </h3>
 
                         <p class="text-[12px] text-slate-400 italic"
-                           data-ro="Tura nu se termină — doar devine mai bună. Drumuri noi mă așteaptă."
-                           data-en="The ride doesn't end — it just gets better. New roads are calling.">
+                           data-ro="Anul acesta nu caut scurtături — caut progres.
+Fiecare tură mă întărește, fiecare urcare mă formează, iar fiecare kilometru mă duce mai aproape de versiunea mea mai puternică.
+Nu mă grăbesc. Construiesc. Rezistență, forță, disciplină — pas cu pas, tură cu tură."
+                           data-en="This year I’m not chasing shortcuts — I’m chasing progress.
+Every ride makes me stronger, every climb shapes me, and every kilometer brings me closer to a tougher, better version of myself.
+I’m not rushing. I’m building. Strength, resilience, discipline — step by step, ride by ride.">
                         </p>
                     </div>
 
